@@ -3,8 +3,8 @@
  */
 package com.github.xuyuanwang.infinite.tree.builder;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -33,36 +33,36 @@ public final class InfiniteTreeBuilder {
             return null;
         }
 
-        List<Node> rootNodes = new ArrayList<>();
+        final List<Node> topNodes = new LinkedList<>();
         for (Node node : nodes) {
             if (ROOT_NODE_ID.equals(node.getParentId())) {
-                rootNodes.add(node);
-                buildChildren(node, nodes);
+                topNodes.add(node);
+                fillChildren(node, nodes);
             }
         }
-        // 对根节点进行排序
-        Collections.sort(rootNodes);
-        return rootNodes;
+        // 对顶级节点进行排序
+        Collections.sort(topNodes);
+        return topNodes;
     }
 
     /**
-     * 构建子节点（递归，深度优先）
+     * 填充子节点（递归，深度优先）
      *
      * @param parentNode
      * @param nodes
      */
-    private static void buildChildren(Node parentNode, List<? extends Node> nodes) {
+    private static void fillChildren(Node parentNode, List<? extends Node> nodes) {
         final String parentId = parentNode.getId();
-        List<Node> children = new ArrayList<>();
-        parentNode.setChildren(children);
+        final List<Node> children = new LinkedList<>();
         for (Node node : nodes) {
             if (node.getParentId().equals(parentId)) {
                 children.add(node);
-                buildChildren(node, nodes);
+                fillChildren(node, nodes);
             }
         }
         // 对子节点进行排序
         Collections.sort(children);
+        parentNode.setChildren(children);
     }
 
 }
