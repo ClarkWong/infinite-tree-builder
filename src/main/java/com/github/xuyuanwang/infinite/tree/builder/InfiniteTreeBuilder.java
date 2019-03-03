@@ -1,7 +1,5 @@
 package com.github.xuyuanwang.infinite.tree.builder;
 
-import org.apache.commons.collections4.CollectionUtils;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -26,7 +24,7 @@ public final class InfiniteTreeBuilder {
      * @return
      */
     public static List<Node> buildTree(List<? extends Node> nodes) {
-        if (CollectionUtils.isEmpty(nodes)) {
+        if (nodes == null || nodes.isEmpty()) {
             return null;
         }
 
