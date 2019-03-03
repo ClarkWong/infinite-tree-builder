@@ -1,4 +1,4 @@
-package com.github.xuyuanwang.infinite.tree;
+package com.github.xuyuanwang.infinite.tree.builder;
 
 import org.apache.commons.collections4.CollectionUtils;
 
