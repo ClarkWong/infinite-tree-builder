@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2019, XuyuanWang
+ */
 package com.github.xuyuanwang.infinite.tree.builder;
 
 import java.util.ArrayList;
@@ -6,6 +9,8 @@ import java.util.List;
 
 /**
  * 无限级树形构建工具
+ *
+ * @author XuyuanWang
  */
 public final class InfiniteTreeBuilder {
 

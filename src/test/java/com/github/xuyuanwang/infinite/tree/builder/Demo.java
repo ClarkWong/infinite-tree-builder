@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2019, XuyuanWang
+ */
 package com.github.xuyuanwang.infinite.tree.builder;
 
 import java.util.ArrayList;
@@ -5,6 +8,8 @@ import java.util.List;
 
 /**
  * 使用演示
+ *
+ * @author XuyuanWang
  */
 public class Demo {
 

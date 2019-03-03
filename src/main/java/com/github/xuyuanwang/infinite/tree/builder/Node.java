@@ -1,9 +1,14 @@
+/*
+ * Copyright (c) 2019, XuyuanWang
+ */
 package com.github.xuyuanwang.infinite.tree.builder;
 
 import java.util.List;
 
 /**
  * 节点模型
+ *
+ * @author XuyuanWang
  */
 public class Node implements Comparable<Node> {
 
