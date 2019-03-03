@@ -8,10 +8,24 @@ import java.util.List;
  */
 public class Demo {
 
-    private static final List<District> DISTRICTS;
+    /**
+     * 主方法，构建地区树
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
+        List<District> districts = initDistrictData();
+        List<Node> districtTree = InfiniteTreeBuilder.buildTree(districts);
+        System.out.println(districtTree);
+    }
 
-    static {
-        // 省级
+    /**
+     * 初始化地区数据
+     *
+     * @return
+     */
+    private static List<District> initDistrictData() {
+        // 省级地区
         District beijing = new District();
         beijing.setId("110000");
         beijing.setName("北京市");
@@ -26,7 +40,7 @@ public class Demo {
         zhejiang.setIndexNumber(1);
         zhejiang.setParentId("root");
 
-        // 市级
+        // 市级地区
         District hangzhou = new District();
         hangzhou.setId("330100");
         hangzhou.setName("杭州市");
@@ -41,7 +55,7 @@ public class Demo {
         ningbo.setIndexNumber(1);
         ningbo.setParentId("330000");
 
-        // 区级
+        // 区级地区
         District xihuDistrict = new District();
         xihuDistrict.setId("330106");
         xihuDistrict.setName("西湖区");
@@ -56,18 +70,14 @@ public class Demo {
         yuhangDistrict.setIndexNumber(1);
         yuhangDistrict.setParentId("330100");
 
-        DISTRICTS = new ArrayList<>(6);
-        DISTRICTS.add(beijing);
-        DISTRICTS.add(zhejiang);
-        DISTRICTS.add(hangzhou);
-        DISTRICTS.add(ningbo);
-        DISTRICTS.add(xihuDistrict);
-        DISTRICTS.add(yuhangDistrict);
-    }
-
-    public static void main(String[] args) {
-        List<Node> districtTree = InfiniteTreeBuilder.buildTree(DISTRICTS);
-        System.out.println(districtTree);
+        List<District> districts = new ArrayList<>(6);
+        districts.add(beijing);
+        districts.add(zhejiang);
+        districts.add(hangzhou);
+        districts.add(ningbo);
+        districts.add(xihuDistrict);
+        districts.add(yuhangDistrict);
+        return districts;
     }
 
 }
