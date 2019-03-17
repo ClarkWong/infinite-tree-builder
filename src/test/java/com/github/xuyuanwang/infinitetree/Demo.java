@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2019, XuyuanWang
  */
-package com.github.xuyuanwang.infinite.tree.builder;
+package com.github.xuyuanwang.infinitetree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class Demo {
      */
     public static void main(String[] args) {
         List<District> districts = initDistrictData();
-        List<Node> districtTree = InfiniteTreeBuilder.buildTree(districts);
+        List<Node> districtTree = Builder.buildTree(districts);
         System.out.println(districtTree);
     }
 

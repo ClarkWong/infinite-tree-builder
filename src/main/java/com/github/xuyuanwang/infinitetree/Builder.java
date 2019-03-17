@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2019, XuyuanWang
  */
-package com.github.xuyuanwang.infinite.tree.builder;
+package com.github.xuyuanwang.infinitetree;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -12,14 +12,14 @@ import java.util.List;
  *
  * @author XuyuanWang
  */
-public final class InfiniteTreeBuilder {
+public final class Builder {
 
     /**
      * 根节点 ID
      */
     private static final String ROOT_NODE_ID = "root";
 
-    private InfiniteTreeBuilder() {
+    private Builder() {
     }
 
     /**

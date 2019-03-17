@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2019, XuyuanWang
  */
-package com.github.xuyuanwang.infinite.tree.builder;
+package com.github.xuyuanwang.infinitetree;
 
 /**
  * 地区
